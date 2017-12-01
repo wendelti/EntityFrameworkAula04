@@ -10,6 +10,17 @@ namespace EntityFrameworkAula04
     {
         static void Main(string[] args)
         {
+
+            //Aula01.ExecutarExercicio();
+            //Aula02.ExecutarExercicio();
+            //Aula03.ExecutarExercicio();
+            //Aula04.ExecutarExercicio();
+            //Aula05.ExecutarExercicio();
+            //Aula06.ExecutarExercicio();
+            //Aula07.ExecutarExercicio();
+            Aula08.ExecutarExercicio();
+            Console.ReadKey();
+
         }
     }
 }
