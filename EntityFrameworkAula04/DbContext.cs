@@ -24,7 +24,7 @@ namespace EntityFrameworkAula04
         public string Nome { get; set; }
         public Nullable<float> Peso { get; set; }
 
-        public int NotaId { get; set; }
+        public int? NotaId { get; set; }
         public Nota Nota { get; set; }
 
         public byte[] Foto { get; set; }
@@ -64,8 +64,8 @@ namespace EntityFrameworkAula04
             ecEstudante.Property(p => p.DataNascimento)
                         .HasColumnName("Nascimento")
                         .HasColumnOrder(2)
-                        .HasColumnType("datetime2")
-                        .IsRequired();
+                        .HasColumnType("datetime2");
+                        //.IsRequired();
 
             ecEstudante.Property(p => p.Altura)
                         .HasPrecision(2, 2);
@@ -73,7 +73,8 @@ namespace EntityFrameworkAula04
             ecEstudante.Property(p => p.Nome)
                        .IsConcurrencyToken();
 
-
+            
+            modelBuilder.Types().Configure(t => t.MapToStoredProcedures());
 
             base.OnModelCreating(modelBuilder);
         }
@@ -85,7 +86,7 @@ namespace EntityFrameworkAula04
     {
         public EscolaConfiguration()
         {
-            this.AddInterceptor(new Aula08.Interceptador());
+            //this.AddInterceptor(new Aula08.Interceptador());
         }
 
     }

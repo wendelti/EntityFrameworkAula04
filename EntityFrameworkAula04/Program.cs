@@ -18,7 +18,8 @@ namespace EntityFrameworkAula04
             //Aula05.ExecutarExercicio();
             //Aula06.ExecutarExercicio();
             //Aula07.ExecutarExercicio();
-            Aula08.ExecutarExercicio();
+            //Aula08.ExecutarExercicio();
+            Aula09.ExecutarExercicio();
             Console.ReadKey();
 
         }
